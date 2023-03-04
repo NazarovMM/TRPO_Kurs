@@ -1,0 +1,19 @@
+.registContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.submitButten {
+    margin-top: 20px;
+}
+
+.text-muted {
+    text-align: center;
+}
+
+input {
+    width: 100%;
+}

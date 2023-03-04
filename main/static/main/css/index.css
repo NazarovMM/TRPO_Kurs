@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.formInput {
+    display: flex;
+    align-items: center;
+}
+
+.instruction {
+    margin-top: 20px;
+}
+
+h4 {
+    text-align: center;
+    margin-left: 0 !important;
+}
+
+.textInstruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: pre;
+}
+
+.punktInstruction{
+    white-space: pre;
+    width: min-content;
+}

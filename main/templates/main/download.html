@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel="stylesheet" href=" {% static 'main/css/download.css' %}">
+{% endblock %}
+
+{% block title %}
+Загрузка
+{% endblock %}
+
+{% block content %}
+<h1>Обработка завершена</h1>
+<h2>Скачайте обработанный файл</h2>
+<div class="downloadContent">
+    <div class="fileName">{{ fileObj }}</div>
+    <a href="../../../media/{{ fileObj }}" download="{{ fileObj }}" type=".wav" class="btn btn-primary">Скачать</a>
+</div>
+<a href="{% url 'home' %}" class="btn btn-primary buttonHome">Обработать больше файлов</a>
+{% endblock %}

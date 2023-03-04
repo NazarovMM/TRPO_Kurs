@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="../../static/main/css/history.css">
+{% endblock %}
+
+{% block title %}
+История
+{% endblock %}
+
+{% block content %}
+<div>{{id}}</div>
+<h1>История обработанных файлов</h1>
+<table class="table table-bordered">
+    <tr>
+      <th scope="col">Пользователь</th>
+      <th scope="col">Имя файла</th>
+      <th scope="col">Дата загрузки</th>
+    </tr>
+{% for history in object_list %}
+    {% if history.author.id == user.id %}
+    <tr>
+        <td>{{history.author}}</td>
+        <td>{{history.name}}</td>
+        <td>{{history.date}}</td>
+    </tr>
+    {% endif %}
+{% endfor %}
+</table>
+{% endblock %}

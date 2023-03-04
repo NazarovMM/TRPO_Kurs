@@ -1,0 +1,41 @@
+.downloadContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 25px;
+    border: 1px solid #0d6efd;
+    background: #ffffff;
+    padding: 2px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 33px;
+    line-height: 44px;
+    letter-spacing: -1.3px;
+    text-align: center;
+    color: #0d6efd;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.3px;
+    font-weight: 300;
+}
+
+.buttonHome {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin-left: 40%;
+    margin-top: 50px;
+}
+
+.fileName{
+    display: flex;
+    align-items: center;
+}

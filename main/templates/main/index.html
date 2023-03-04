@@ -1,0 +1,33 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel="stylesheet" href=" {% static '../../static/main/css/index.css' %}">
+{% endblock %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+<h1>Удаление шума из аудиофайлов</h1>
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data" action="download" user="{{ user.id }}" class="formInput">
+        {% csrf_token %}
+        <input type="file" name="file" accept=".wav" class="inputFile">
+        <button type="submit" class="btn btn-success">Обработать</button>
+    </form>
+</div>
+<div class="instruction">
+    <h4>Инструкция по работе с системой:</h4>
+    <div class="textInstruction">
+        <div class="punktInstruction">Данная система позволяет  вам загрузить аудиофайл формата .wav и скачать обработанную версия</div>
+        <div class="punktInstruction">Необходимо нажать на кнопку "Выберите файл" и выбрать аудиофайл в формате .wav, который вы хотите обработать</div>
+        <div class="punktInstruction">После выбора файла его название отобразится справка от кнопки "Выберите файл", после чего необходимо нажать на кнопку "Обработать"</div>
+        <div class="punktInstruction">После обработки файла вас автоматически перенаправит на страницу загрузки, где можно скачать обработанную версию</div>
+        </div>
+</div>
+{% endblock %}

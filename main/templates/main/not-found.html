@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block css_additional %}
+<link rel="stylesheet" href=" {% static '../../static/main/css/not-found.css' %}">
+{% endblock %}
+
+{% block title %}
+Страница не найдена
+{% endblock %}
+
+{% block content %}
+<h1 style="text-align: center;">Страница не найдена</h1>
+<a href="{% url 'home' %}" class="btn btn-primary buttonHome" style="margin-top: 30px; display: flex; justify-content: center; width: 20%; margin-left: 40%;">Вернуться на главную страницу</a>
+{% endblock %}
